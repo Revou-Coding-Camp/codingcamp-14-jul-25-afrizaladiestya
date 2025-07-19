@@ -74,12 +74,12 @@ main {
 }
 
 main .homepage {
-    min-height: 80vh; /* atau 100vh jika ingin full layar */
+    min-height: 80vh; 
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    padding: 80px 0;  /* Tambah ruang atas bawah */
+    padding: 80px 0;  
 }
 
 
@@ -157,6 +157,134 @@ footer {
     background-color: #D72323;
 }
 
+.messageus-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.messageus-section textarea, 
+.messageus-section button {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.messageus-section button {
+    background-color: #D72323;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.messageus-section button:hover {
+    background-color: #a51818;
+}
+
+.output-box {
+    display: flex;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+form .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+form .form-group label {
+    width: 150px;      
+    text-align: left;  
+    font-weight: bold;
+}
+
+form .form-group input[type="text"],
+form .form-group input[type="date"],
+form .form-group textarea {
+    flex: 1;
+    padding: 5px;
+    font-family: inherit;
+}
+
+.gender-options {
+    display: flex;
+    gap: 4px; 
+    align-items: center;
+}
+
+.gender-options label {
+    margin: 0;
+    padding: 0;
+    gap: 2px; 
+}
+
+button[type="button"] {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #D72323;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-output-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+#messageForm {
+    flex: 2;
+    min-width: 250px;
+}
+
+.output-box {
+    flex: 1;
+    min-width: 220px;
+    min-height: 180px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 0;
+}
+
+
+@media (max-width: 700px) {
+    .form-output-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+    #messageForm, .output-box {
+        min-width: 0;
+        width: 100%;
+    }
+    .form-group {
+        align-items: flex-start;
+    }
+    .form-group label {
+        width: 110px; 
+        margin-bottom: 0;
+        font-size: 1rem;
+    }
+    .gender-options {
+        flex-direction: row;
+        gap: 8px; 
+        width: auto;
+    }
+}
+
 @media screen and (max-width: 992px) {
     main .homepage .homepage-image img {
         width: 200px;
@@ -175,6 +303,10 @@ footer {
     .ourprofile-section p,
     .messageus-section p {
         font-size: 1rem;
+    }
+    .ourprofile-content {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
 
@@ -233,6 +365,22 @@ footer {
     .messageus-section p {
         font-size: 0.95rem;
     }
+    .ourprofile-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .ourprofile-image img {
+        max-width: 400px;
+        height: auto;
+    }
+    .gender-options {
+        gap: 8px;
+    }
+    .gender-options {
+        flex-direction: column;
+        gap: 4px; 
+        align-items: flex-start;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -253,5 +401,9 @@ footer {
     .ourprofile-section p,
     .messageus-section p {
         font-size: 0.85rem;
+    }
+    .ourprofile-image img {
+        max-width: 300px;
+        height: auto;
     }
 }

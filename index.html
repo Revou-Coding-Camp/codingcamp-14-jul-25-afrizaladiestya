@@ -50,8 +50,43 @@
         <div class="messageus-section" id="messageus">
             <h2>Message Us</h2>
             <p>Silakan kirim pesan atau pertanyaan Anda tentang koi melalui formulir berikut:</p>
+
+            <div class="form-output-row">
+                <form id="messageForm">
+                    <div class="form-group">
+                        <label>Nama:</label>
+                        <input type="text" id="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tanggal Lahir:</label>
+                        <input type="date" id="birthdate" required>
+                    </div>
+
+                <div class="form-group">
+                    <label>Jenis Kelamin:</label>
+                    <div class="gender-options">
+                        <label>
+                            <input type="radio" name="gender" value="Laki - Laki" checked> Laki-Laki
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="Perempuan">
+                            Perempuan
+                        </label>
+                    </div>
+                </div>
+
+                    <div class="form-group">
+                        <label>Pesan:</label>
+                        <textarea id="message" rows="4" required></textarea>
+                    </div>
+
+                    <button type="button" onclick="submitForm()">Submit</button>
+                </form>
+                <div id="output" class="output-box" style="display:none;"></div>
+            </div>
         </div>
-        </main>
+    </main>
     
 
     <footer>
