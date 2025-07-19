@@ -74,7 +74,7 @@ main {
 }
 
 main .homepage {
-    flex: 1;
+    min-height: 80vh; /* atau 100vh jika ingin full layar */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,9 +109,9 @@ main .homepage .homepage-image img {
 }
 
 .ourprofile-section, .messageus-section {
-    width: 100vw;      
+    width: 95vw;      
     margin: 0;        
-    padding: 4rem 2rem;
+    padding: 1rem 2rem;
     border-top: 1px solid #ccc;
     box-sizing: border-box; 
     text-align: center;
@@ -131,6 +131,23 @@ main .homepage .homepage-image img {
     border-top: 1px solid #ccc;
 }
 
+.ourprofile-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.ourprofile-content p {
+    flex: 2;
+    text-align: justify;
+}
+
+.ourprofile-image img {
+    max-width: 450px;
+    border-radius: 12px;
+}
 
 footer {
     font-family:'Segoe UI';
